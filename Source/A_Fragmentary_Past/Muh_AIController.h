@@ -13,5 +13,19 @@ UCLASS()
 class A_FRAGMENTARY_PAST_API AMuh_AIController : public AAIController
 {
 	GENERATED_BODY()
-	
+
+public:
+	AMuh_AIController(FObjectInitializer const& object_initializer = FObjectInitializer::Get());
+	void BeginPlay() override;
+	void OnPossess(APawn* const pawn) override;
+	class UBlackboardComponet* get_blackboard() const;
+private:
+	UPROPERTY(EditInstanceOnly, BlueprintReadWrite, Category = "AI", meta = (AllowPrivateAccess = "true"))
+	class UBehaviorTreeComponet* behavior_tree_component;
+
+	UPROPERTY(EditInstanceOnly, BlueprintReadWrite, Category = "AI", meta = (AllowPrivateAccess = "true"))
+	class UBehaviorTree* btree;
+
+	class UBlackboardComponet* blackboard;
+
 };
