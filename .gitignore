@@ -2,6 +2,11 @@ Binaries
 DerivedDataCache
 Intermediate
 Saved
+<<<<<<< HEAD
+=======
+.vscode
+.vs
+>>>>>>> parent of 0e158ca... Update .gitignore
 *.VC.db
 *.opensdf
 *.opendb
